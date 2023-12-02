@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
+</head>
+<body>
+    <div class="createGoodsPopup">
+        <h2>Create a product</h2>
+        <input type="text" class="GoodsName createGoodsPopupInput" placeholder="Name">
+        <!-- <input type="text" class="GoodsValue" placeholder="Value">
+        <input type="text" class="GoodsCategory" placeholder="Category"> -->
+
+        <div class="popupBtn">
+            <button id="createGoodsBtn" class="PopupBtn">Create</button>
+            <button id="cancelCreateGoods" class="PopupBtn">Cancel</button>
+
+        </div>
+    </div>
+
+    <div class="orderPopup">
+        <h2>Order a product</h2>
+        <select id="orderName" class="orderPopup_input"></select>
+        <input type="text" class="orderCount orderPopup_input" placeholder="Count">
+        <input type="text" class="orderPrice orderPopup_input" placeholder="Price">
+        <input type="text" class="deliveryPrice orderPopup_input" placeholder="Delivery Price">
+        <div class="popupBtn">
+            <button id="createOrder" class="PopupBtn">Order</button>
+            <button id="cancelOrder" class="PopupBtn">Cancel</button>
+        </div>
+    </div>
+
+
+    <div class="wrap">
+        <div class="header">
+            <div class="logo">Juice</div>
+            <div class="headerBtns">
+                <button id="addJuice" class="addJuice">Create a product</button>
+                <button id="orderBtn" class="orderBtn">Order</button>
+                <button id="sellBtn" class="sellBtn">Sell</button>
+                
+            </div>
+        </div>
+        <div class="storageContainer">
+            <div class="drinkStorage"></div>
+
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
