@@ -45,7 +45,7 @@ function init(){
             <button id="Order">Order</button>
             <button id="Sell">Sell</button>
         </div>
-        <img class="drinkItem_img" src="./img/sandora.png" alt="">
+        <img class="drinkItem_img" src="./img/${el.name}.png" alt="">
         <div class="drinkItem_name">${el.name}</div>
         <div class="drinkItem_taste">${el.category}</div>
         <div class="drinkItem_count">count: ${el.count}L</div>
