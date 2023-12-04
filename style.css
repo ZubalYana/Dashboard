@@ -173,6 +173,7 @@
   box-shadow: 0 0 5px #999;
   border-radius: 10px;
   justify-content: space-between;
+  z-index: 999;
 }
 .createGoodsPopup .createGoodsPopupInput {
   width: 90%;
