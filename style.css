@@ -21,11 +21,10 @@
   display: flex;
   background-color: #001C30;
   padding: 26px;
-  align-items: center;
 }
 .wrap .header {
-  width: 300px;
-  height: 95vh;
+  width: 267px;
+  height: 100%;
   display: flex;
   padding: 10px;
   border: 3px #13637E solid;
@@ -83,27 +82,79 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
-  margin-top: 10px;
 }
 .wrap .storageContainer .drinkStorage {
-  width: 90%;
-  min-height: 200px;
-  background-color: #eee;
-  border-radius: 30px;
+  width: 95%;
+  height: 400px;
+  padding: 10px;
+  border: 3px #13637E solid;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 .wrap .storageContainer .drinkStorage .drinkItem {
-  width: 120px;
-  height: 120px;
-  background-color: rgb(101, 137, 101);
+  width: 186px;
+  height: 134px;
+  background-color: #13637E;
   color: #fff;
   border-radius: 10px;
   display: flex;
+  justify-content: flex-end;
+  position: relative;
+  flex-direction: column;
+  padding: 9px;
+}
+.wrap .storageContainer .drinkStorage .drinkItem .drinkItem_buttons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 9px;
+  right: 9px;
+}
+.wrap .storageContainer .drinkStorage .drinkItem .drinkItem_buttons button {
+  width: 47px;
+  height: 20px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: #64CCC5;
+  color: #001C30;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.wrap .storageContainer .drinkStorage .drinkItem #Sell {
+  margin-top: 7px;
+}
+.wrap .storageContainer .drinkStorage .drinkItem .drinkItem_name {
+  font-size: 24px;
+  font-weight: 800;
+  color: #001C30;
+}
+.wrap .storageContainer .drinkStorage .drinkItem .drinkItem_taste {
+  font-size: 14px;
+  font-weight: 400;
+  color: #001C30;
+  margin-top: -3px;
+}
+.wrap .storageContainer .drinkStorage .drinkItem .drinkItem_count {
+  font-size: 14px;
+  font-weight: 600;
+  color: #001C30;
+  margin-top: 7px;
+}
+.wrap .storageContainer .drinkStorage .drinkItem .drinkItem_img {
+  width: 120px;
+  position: absolute;
+  top: -70px;
+  left: -10px;
+}
+.wrap .headerContainer {
+  height: 100%;
+  display: flex;
   align-items: center;
 }
 
