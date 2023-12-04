@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
+    <link rel="icon" href="./img/juice.png">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css' integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==' crossorigin='anonymous'/>
 </head>
 <body>
     <div class="createGoodsPopup">
@@ -37,13 +39,14 @@
 
     <div class="wrap">
         <div class="header">
-            <div class="logo">Juice</div>
+            <div class="logo"><img class="logoImg" src="./img/juice.png" alt=""> Juice</div>
             <div class="headerBtns">
-                <button id="addJuice" class="addJuice">Create a product</button>
-                <button id="orderBtn" class="orderBtn">Order</button>
-                <button id="sellBtn" class="sellBtn">Sell</button>
-                
+                <button id="addJuice" class="addJuice"><img class="btn_img" src="./img/create.png" alt=""> Create a product</button>
+                <button id="orderBtn" class="orderBtn"><img class="btn_img" src="./img/order.png" alt="">Order goods</button>
+                <button id="sellBtn" class="sellBtn"><img class="btn_img" src="./img/sell.png" alt="">Sell goods</button>
             </div>
+            <i class="fa-solid fa-gear" id="gear"></i>
+
         </div>
         <div class="storageContainer">
             <div class="drinkStorage"></div>

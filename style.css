@@ -9,23 +9,60 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  background-color: #001C30;
+  padding: 26px;
   align-items: center;
 }
 .wrap .header {
-  width: 100%;
-  height: 10vh;
+  width: 300px;
+  height: 95vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 100px;
+  padding: 10px;
+  border: 3px #13637E solid;
+  border-radius: 15px;
+  flex-direction: column;
+  position: relative;
 }
 .wrap .header .headerBtns button {
-  padding: 10px 20px;
+  width: 224px;
+  height: 54px;
+  background-color: #13637E;
+  color: #64CCC5;
+  box-shadow: 4px 4px 4px 0px #64CCC5;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 23px;
+}
+.wrap .header .logo {
+  font-size: 32px;
+  font-weight: 700;
+  color: #64CCC5;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+.wrap .header .logoImg {
+  width: 50px;
+}
+.wrap .header .btn_img {
+  width: 20px;
+  margin-right: 7px;
+}
+.wrap .header #gear {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  color: #64CCC5;
+  cursor: pointer;
 }
 .wrap .storageContainer {
   width: 100%;
