@@ -51,21 +51,34 @@ function init(){
         <img class="drinkItem_img" src="./img/${el.name}.png" alt="">
         <div class="drinkItem_name">${el.name}</div>
         <div class="drinkItem_taste">${el.category}</div>
-        <div class="drinkItem_count">count: ${el.count}L</div>
+        <div class="drinkItem_count" data-drink-name="${el.name}">count: ${el.count}L</div>
     </div>
     `)
     }
 }
 init();
 
+let data = JSON.parse(localStorage.getItem('db'))
 
-$('#createOrder').click(function(){
+
+
+$('#createOrder').click(function () {
     let newOrder = {
         name: $('#orderName').val(),
-        price: parseInt( $('.orderCount').val()),
-        count: parseInt($('.orderPrice').val()),
-        deliveryPrice:  parseInt($('.deliveryPrice').val()),
+        price: parseInt($('.orderPrice').val()),
+        count: parseInt($('.orderCount').val()),
+        deliveryPrice: parseInt($('.deliveryPrice').val()),
         date: new Date().toLocaleString()
+    };
+
+    for (let el of data) {
+        if (el.name === newOrder.name) {
+            el.count = Number(el.count) + Number(newOrder.count);
+            $(`.drinkItem_count[data-drink-name="${el.name}"]`).html(`count: ${el.count}L`);
+        }
     }
-    console.log(newOrder)
-})
+
+    $('.orderPrice').val('');
+    $('.orderCount').val('');
+    $('.deliveryPrice').val('');
+});
