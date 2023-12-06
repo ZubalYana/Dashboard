@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Montserrat;
+    user-select: none;
 }
 ::selection{
     background-color: #1a7391;
@@ -28,7 +29,7 @@
         width: 267px;
         height: 100%;
         display: flex;
-        padding: 10px;
+        padding: 15px;
         border: 3px #13637E solid;
         border-radius: 15px;
         flex-direction: column;
@@ -79,6 +80,27 @@
             font-size: 20px;
             color: #64CCC5;
             cursor: pointer;
+        }
+        .moneyInfo{
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .moneyInfo:hover{
+            color: #1a7391;
+            cursor: context-menu;
+        }
+        .earnedMoney{
+            color: #3a7773;
+        }
+        .spendedMoney{
+            color: #54a6a1;
+        }
+        .balance{
+            color: #64CCC5;
+        }
+        .moneyCount{
+            margin-top: 20px;
         }
     }
     .storageContainer{
