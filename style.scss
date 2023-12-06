@@ -15,6 +15,15 @@
     display: flex;
     background-color: #001C30;
     padding: 26px;
+    .wrapBackgroundContainer{
+        width: 95%;
+        height: 95%;
+        position: absolute;
+        background-color: #001c30d1;
+        top: 0px;
+        z-index: 20;
+        display: none;
+    }
     .header{
         width: 267px;
         height: 100%;

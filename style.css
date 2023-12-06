@@ -22,6 +22,15 @@
   background-color: #001C30;
   padding: 26px;
 }
+.wrap .wrapBackgroundContainer {
+  width: 95%;
+  height: 95%;
+  position: absolute;
+  background-color: rgba(0, 28, 48, 0.8196078431);
+  top: 0px;
+  z-index: 20;
+  display: none;
+}
 .wrap .header {
   width: 267px;
   height: 100%;

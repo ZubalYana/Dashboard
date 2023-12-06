@@ -1,12 +1,10 @@
 $('#addJuice').click(function(){
     $('.createGoodsPopup').css('display', 'flex')
-    $('.wrap').css('filter', 'blur(5px)')
+    $('.wrapBackgroundContainer').css('display', 'flex')
 })
 $('#cancelCreateGoods').click(function(){
     $('.createGoodsPopup').css('display', 'none')
-    $('.wrap').css('filter', 'none')
-
-
+    $('.wrapBackgroundContainer').css('display', 'none')
  })
 let db = JSON.parse(localStorage.getItem('db')) || []
 $('#createGoodsBtn').click(function(){
@@ -31,12 +29,12 @@ $('#createGoodsBtn').click(function(){
 
 $('#orderBtn').click(function(){
     $('.orderPopup').css('display', 'flex')
-    $('.wrap').css('filter', 'blur(5px)')
+    $('.wrapBackgroundContainer').css('display', 'flex')
 })
 
 $('#cancelOrder').click(function(){
     $('.orderPopup').css('display', 'none')
-    $('.wrap').css('filter', 'none')
+    $('.wrapBackgroundContainer').css('display', 'none')
 })
 
 function init(){
