@@ -125,3 +125,12 @@ $('#cancelSell').click(function(){
     $('.sellDeliveryPrice').val('');
 
 })
+
+
+
+
+
+
+
+
+
