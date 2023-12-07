@@ -82,3 +82,32 @@ $('#createOrder').click(function () {
     $('.orderCount').val('');
     $('.deliveryPrice').val('');
 });
+
+
+
+$('#sellBtn').click(function(){
+    $('.sellPopup').css('display', 'flex')
+    $('.wrapBackgroundContainer').css('display', 'flex')
+
+    let newSell = {
+        name: $('#sellName').val(),
+        price: parseInt($('.sellPrice').val()),
+        count: parseInt($('.sellCount').val()),
+        deliveryPrice: parseInt($('.sellDeliveryPrice').val()),
+        customer: parseInt($('.sellCustomer').val()),
+        date: new Date().toLocaleString()
+    };
+    for(let el of data){
+        $('#sellName').append(`<option value="${el.name}">${el.name}</option>`)
+
+        if (el.name === newSell.name) {
+            el.count = Number(el.count) - Number(newSell.count);
+            $(`.drinkItem_count[data-drink-name="${el.name}"]`).html(`count: ${el.count}L`);
+        }
+        
+    }
+})
+$('#cancelSell').click(function(){
+    $('.sellPopup').css('display', 'none')
+    $('.wrapBackgroundContainer').css('display', 'none')
+ })

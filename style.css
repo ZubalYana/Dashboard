@@ -283,4 +283,51 @@
   background-color: #64CCC5;
   color: #001C30;
   box-shadow: 4px 4px 4px 0px #001C30;
+}
+
+.sellPopup {
+  width: 500px;
+  min-height: 380px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  margin-left: -250px;
+  background-color: #1a7391;
+  color: #001C30;
+  box-shadow: 0 0 5px #999;
+  border-radius: 10px;
+  justify-content: space-between;
+  z-index: 999;
+}
+.sellPopup .sellPopup_input {
+  width: 90%;
+  height: 40px;
+  border: none;
+  box-shadow: 0 0 2px #333;
+  padding: 0 10px;
+  background-color: #001C30;
+  color: #64CCC5;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px 0px #3f9a94;
+}
+.sellPopup .PopupBtn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 10px;
+  background-color: #13637E;
+  color: #64CCC5;
+  box-shadow: 4px 4px 4px 0px #3f9a94;
+  font-weight: 600;
+}
+.sellPopup .PopupBtn:hover {
+  background-color: #64CCC5;
+  color: #001C30;
+  box-shadow: 4px 4px 4px 0px #001C30;
 }/*# sourceMappingURL=style.css.map */
