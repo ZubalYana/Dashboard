@@ -86,9 +86,23 @@ $('#createOrder').click(function () {
 
 
 $('#sellBtn').click(function(){
+    $('#sellName').empty();
     $('.sellPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')
 
+    for(let el of data){
+        
+        $('#sellName').append(`<option value="${el.name}">${el.name}</option>`)  
+    }
+})
+$('#cancelSell').click(function(){
+    
+    $('.sellPopup').css('display', 'none')
+    $('.wrapBackgroundContainer').css('display', 'none')
+ })
+
+
+ $('#SellSProduct').click(function(){
     let newSell = {
         name: $('#sellName').val(),
         price: parseInt($('.sellPrice').val()),
@@ -98,16 +112,16 @@ $('#sellBtn').click(function(){
         date: new Date().toLocaleString()
     };
     for(let el of data){
-        $('#sellName').append(`<option value="${el.name}">${el.name}</option>`)
+
 
         if (el.name === newSell.name) {
-            el.count = Number(el.count) - Number(newSell.count);
+            el.count = el.count - newSell.count;
             $(`.drinkItem_count[data-drink-name="${el.name}"]`).html(`count: ${el.count}L`);
         }
         
     }
+    $('.sellPrice').val('');
+    $('.sellCount').val('');
+    $('.sellDeliveryPrice').val('');
+
 })
-$('#cancelSell').click(function(){
-    $('.sellPopup').css('display', 'none')
-    $('.wrapBackgroundContainer').css('display', 'none')
- })
