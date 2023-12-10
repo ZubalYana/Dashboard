@@ -6,7 +6,16 @@ $('#cancelCreateGoods').click(function(){
     $('.createGoodsPopup').css('display', 'none')
     $('.wrapBackgroundContainer').css('display', 'none')
  })
-let db = JSON.parse(localStorage.getItem('db')) || []
+ let dbString = localStorage.getItem('db');
+ let db = [];
+ 
+ if (dbString) {
+   try {
+     db = JSON.parse(dbString);
+   } catch (error) {
+     console.error('Error parsing JSON:', error);
+   }
+ }
 $('#createGoodsBtn').click(function(){
     if($('.GoodsName').val()){
         let newGoods = {
@@ -63,6 +72,7 @@ let data = JSON.parse(localStorage.getItem('db'))
 
 
 $('#createOrder').click(function () {
+    
     let newOrder = {
         name: $('#orderName').val(),
         price: parseInt($('.orderPrice').val()),
