@@ -136,21 +136,19 @@ $('#cancelSell').click(function(){
 
 })
 
+
+
 const ctx = document.getElementById('myChart');
 
 const updatedData = {
-    labels: [
-      'Red',
-      'Blue',
-      'Yellow'
-    ],
+    labels: data.map(el => el.name),
     datasets: [{
       label: 'My First Dataset',
-      data: [70, 56, 37],
+      data: data.map(el => parseInt(el.count)),
       backgroundColor: [
         '#13637E',
         '#3f9a94',
-        '#4591ac',
+        '#14537E',
 
       ],
       hoverOffset: 4

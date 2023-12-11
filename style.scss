@@ -22,7 +22,7 @@
         position: absolute;
         background-color: #001c30d1;
         top: 0px;
-        z-index: 20;
+        z-index: 999;
         display: none;
     }
     .header{
@@ -218,7 +218,7 @@
     box-shadow: 0 0 5px #999;
     border-radius: 10px;
     justify-content: space-between;
-    z-index: 999;
+    z-index: 9999;
     .createGoodsPopupInput{
         width: 90%;
         height: 40px;
@@ -268,7 +268,7 @@
     box-shadow: 0 0 5px #999;
     border-radius: 10px;
     justify-content: space-between;
-    z-index: 999;
+    z-index: 9999;
     .orderPopup_input{
         width: 90%;
         height: 40px;
@@ -317,7 +317,7 @@
     box-shadow: 0 0 5px #999;
     border-radius: 10px;
     justify-content: space-between;
-    z-index: 999;
+    z-index: 9999;
     .sellPopup_input{
         width: 90%;
         height: 40px;
