@@ -118,13 +118,14 @@
 }
 .wrap .storageContainer .drinkStorage {
   width: 95%;
-  height: 400px;
+  height: 280px;
   padding: 10px;
   border: 3px #13637E solid;
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding-top: 50px;
 }
 .wrap .storageContainer .drinkStorage .drinkItem {
   width: 186px;
