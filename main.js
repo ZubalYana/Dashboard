@@ -146,11 +146,11 @@ const updatedData = {
     ],
     datasets: [{
       label: 'My First Dataset',
-      data: [10, 85, 5],
+      data: [70, 56, 37],
       backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)',
+        '#13637E',
+        '#3f9a94',
+        '#4591ac',
 
       ],
       hoverOffset: 4
