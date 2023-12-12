@@ -100,10 +100,10 @@
   cursor: context-menu;
 }
 .wrap .header .earnedMoney {
-  color: #3a7773;
+  color: #64CCC5;
 }
 .wrap .header .spendedMoney {
-  color: #54a6a1;
+  color: #64CCC5;
 }
 .wrap .header .balance {
   color: #64CCC5;
@@ -360,4 +360,13 @@
 .chartContainer {
   width: 100%;
   display: flex;
+}
+
+.orders {
+  width: 400px;
+  height: 346px;
+  border: 3px #13637E solid;
+  border-radius: 15px;
+  margin: 30px;
+  margin-bottom: 0px;
 }/*# sourceMappingURL=style.css.map */

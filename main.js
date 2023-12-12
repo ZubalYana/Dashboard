@@ -162,7 +162,7 @@ function updateChart(){
           backgroundColor: [
             '#13637E',
             '#3f9a94',
-            '#233a94',
+            '#64CCC5',
     
           ],
           hoverOffset: 4
