@@ -46,6 +46,9 @@ $('#cancelOrder').click(function(){
     $('.wrapBackgroundContainer').css('display', 'none')
 })
 
+
+
+
 function init(){
     let data = JSON.parse(localStorage.getItem('db'))
     console.log(data)
@@ -54,8 +57,8 @@ function init(){
         $('.drinkStorage').append(`
         <div class="drinkItem">
         <div class="drinkItem_buttons">
-            <button id="Order">Order</button>
-            <button id="Sell">Sell</button>
+            <button class="Order">Order</button>
+            <button class="Sell">Sell</button>
         </div>
         <img class="drinkItem_img" src="./img/${el.name}.png" alt="">
         <div class="drinkItem_name">${el.name}</div>
@@ -66,6 +69,10 @@ function init(){
     }
 }
 init();
+$('.Order').click(function(){
+    $('.orderPopup').css('display', 'flex')
+    $('.wrapBackgroundContainer').css('display', 'flex')
+})
 
 let data = JSON.parse(localStorage.getItem('db'))
 
@@ -113,7 +120,10 @@ $('#cancelSell').click(function(){
     $('.wrapBackgroundContainer').css('display', 'none')
  })
 
-
+ $('.Sell').click(function(){
+    $('.sellPopup').css('display', 'flex')
+    $('.wrapBackgroundContainer').css('display', 'flex')
+})
  $('#SellSProduct').click(function(){
     let newSell = {
         name: $('#sellName').val(),
@@ -135,7 +145,7 @@ $('#cancelSell').click(function(){
     $('.sellPrice').val('');
     $('.sellCount').val('');
     $('.sellDeliveryPrice').val('');
-
+    updateChart()
 })
 
 let myChart;
@@ -162,6 +172,20 @@ function updateChart(){
     const config = {
         type: 'doughnut',
         data: updatedData,
+        options: {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#64CCC5', // Change this to the desired color for the labels
+                    }
+                }
+            },
+            elements: {
+                arc: {
+                    borderColor: '#1a7391' // Change this to the desired color for the border
+                }
+            }
+        }
     };
     myChart = new Chart(ctx, config);
     

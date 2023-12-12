@@ -170,7 +170,7 @@
   border: none;
   cursor: pointer;
 }
-.wrap .storageContainer .drinkStorage .drinkItem #Sell {
+.wrap .storageContainer .drinkStorage .drinkItem .Sell {
   margin-top: 7px;
 }
 .wrap .storageContainer .drinkStorage .drinkItem .drinkItem_name {
