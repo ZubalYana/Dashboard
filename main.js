@@ -29,7 +29,7 @@ $('#createGoodsBtn').click(function(){
          $('.createGoodsPopup').css('display', 'none')
 
 
-
+         updateChart();
     }else{
         alert('Write down goods name')
     }
@@ -91,6 +91,7 @@ $('#createOrder').click(function () {
     $('.orderPrice').val('');
     $('.orderCount').val('');
     $('.deliveryPrice').val('');
+    updateChart();
 });
 
 
@@ -104,6 +105,7 @@ $('#sellBtn').click(function(){
         
         $('#sellName').append(`<option value="${el.name}">${el.name}</option>`)  
     }
+    updateChart();
 })
 $('#cancelSell').click(function(){
     
@@ -136,28 +138,33 @@ $('#cancelSell').click(function(){
 
 })
 
-
-
-const ctx = document.getElementById('myChart');
-
-const updatedData = {
-    labels: data.map(el => el.name),
-    datasets: [{
-      label: 'My First Dataset',
-      data: data.map(el => parseInt(el.count)),
-      backgroundColor: [
-        '#13637E',
-        '#3f9a94',
-        '#14537E',
-
-      ],
-      hoverOffset: 4
-    }]
-};
-
-const config = {
-    type: 'doughnut',
-    data: updatedData,
-};
-new Chart(ctx, config);
-
+let myChart;
+function updateChart(){
+    const ctx = document.getElementById('myChart');
+    if (myChart) {
+        myChart.destroy();
+    }
+    const updatedData = {
+        labels: data.map(el => el.name),
+        datasets: [{
+          label: 'My First Dataset',
+          data: data.map(el => parseInt(el.count)),
+          backgroundColor: [
+            '#13637E',
+            '#3f9a94',
+            '#233a94',
+    
+          ],
+          hoverOffset: 4
+        }]
+    };
+    
+    const config = {
+        type: 'doughnut',
+        data: updatedData,
+    };
+    myChart = new Chart(ctx, config);
+    
+    
+}
+updateChart();
