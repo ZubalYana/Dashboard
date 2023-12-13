@@ -1,3 +1,5 @@
+
+
 $('#addJuice').click(function(){
     $('.createGoodsPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')

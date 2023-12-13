@@ -100,13 +100,13 @@
   cursor: context-menu;
 }
 .wrap .header .earnedMoney {
-  color: #64CCC5;
+  color: #64ccb5;
 }
 .wrap .header .spendedMoney {
-  color: #64CCC5;
+  color: #64b0cc;
 }
 .wrap .header .balance {
-  color: #64CCC5;
+  color: #6488cc;
 }
 .wrap .header .moneyCount {
   margin-top: 20px;
