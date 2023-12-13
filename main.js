@@ -1,4 +1,27 @@
+function updateDateTime() {
+    let currentDate = new Date();
+    
+    let day = currentDate.getDate();
+    let month = currentDate.getMonth() + 1; 
+    let year = currentDate.getFullYear();
+    
+    let daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    let dayOfWeek = daysOfWeek[currentDate.getDay()];
 
+    let hours = currentDate.getHours();
+    let minutes = currentDate.getMinutes();
+    let seconds = currentDate.getSeconds();
+
+    let formattedDate = day + '-' + month + '-' + year + ' ' + dayOfWeek;
+    let formattedTime = hours + ':' + (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+
+    document.querySelector('.header_currentDate').textContent = formattedDate;
+    document.querySelector('.header_currentTime').textContent = formattedTime;
+}
+
+setInterval(updateDateTime, 1000);
+
+updateDateTime();
 
 $('#addJuice').click(function(){
     $('.createGoodsPopup').css('display', 'flex')

@@ -44,6 +44,21 @@
   flex-direction: column;
   position: relative;
 }
+.wrap .header .header_dateContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  color: #64CCC5;
+}
+.wrap .header .header_currentTime {
+  font-size: 48px;
+  font-weight: 700;
+}
+.wrap .header .header_currentDate {
+  font-size: 23px;
+  font-weight: 500;
+}
 .wrap .header .headerBtns button {
   width: 224px;
   height: 54px;
