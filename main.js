@@ -77,7 +77,7 @@ $('.Order').click(function(){
 let data = JSON.parse(localStorage.getItem('db'))
 
 
-let spendedMoney;
+let spendedMoney = 0;
 
 $('#createOrder').click(function () {
     
@@ -103,6 +103,7 @@ $('#createOrder').click(function () {
 
     spendedMoney = newOrder.price * newOrder.count;
     $('.spendedMoney').html(`Spended: ${spendedMoney}$`)
+    countBalance()
 });
 
 
@@ -117,6 +118,7 @@ $('#sellBtn').click(function(){
         $('#sellName').append(`<option value="${el.name}">${el.name}</option>`)  
     }
     updateChart();
+    countBalance()
 })
 $('#cancelSell').click(function(){
     
@@ -128,7 +130,7 @@ $('#cancelSell').click(function(){
     $('.sellPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')
 })
-let earnedMoney;
+let earnedMoney = 0;
  $('#SellSProduct').click(function(){
     let newSell = {
         name: $('#sellName').val(),
@@ -153,6 +155,7 @@ let earnedMoney;
     updateChart()
     earnedMoney = newSell.price * newSell.count;
     $('.earnedMoney').html(`Earned: ${earnedMoney}$`)
+    countBalance()
 })
 
 let myChart;
@@ -199,3 +202,8 @@ function updateChart(){
     
 }
 updateChart();
+
+let balance = 0;
+function countBalance(){
+    $('#balance').html(`Balance: ${earnedMoney - spendedMoney}$`)
+}
