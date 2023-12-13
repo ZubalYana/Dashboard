@@ -127,8 +127,16 @@ $('#cancelSell').click(function(){
  })
 
  $('.Sell').click(function(){
+    $('#sellName').empty();
     $('.sellPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')
+
+    for(let el of data){
+        
+        $('#sellName').append(`<option value="${el.name}">${el.name}</option>`)  
+    }
+    updateChart();
+    countBalance()
 })
 let earnedMoney = 0;
  $('#SellSProduct').click(function(){
