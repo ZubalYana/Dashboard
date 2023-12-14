@@ -207,7 +207,7 @@ function updateChart(){
     const updatedData = {
         labels: data.map(el => el.name),
         datasets: [{
-          label: 'My First Dataset',
+          label: 'Drinks',
           data: data.map(el => parseInt(el.count)),
           backgroundColor: [
             '#13637E',
