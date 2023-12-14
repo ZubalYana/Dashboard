@@ -12,7 +12,7 @@ function updateDateTime() {
     let minutes = currentDate.getMinutes();
     let seconds = currentDate.getSeconds();
 
-    let formattedDate = day + '-' + month + '-' + year + ' ' + dayOfWeek;
+    let formattedDate = day + '-' + month + '-' + year + ', ' + dayOfWeek;
     let formattedTime = hours + ':' + (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
 
     document.querySelector('.header_currentDate').textContent = formattedDate;
