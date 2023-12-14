@@ -483,4 +483,9 @@
         align-items: center;
         display: flex;
     }
+    .settingsPopup_languagescreen{
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
   }

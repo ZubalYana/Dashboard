@@ -247,3 +247,9 @@ let balance = 0;
 function countBalance(){
     $('#balance').html(`Balance: ${earnedMoney - spendedMoney}$`)
 }
+
+
+$('#language').click(function(){
+    $('.settingsPopup_generalScreen').css('display', 'none')
+    $('.settingsPopup_languagescreen').css('display', 'flex')
+})
