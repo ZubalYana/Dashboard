@@ -22,7 +22,10 @@ function updateDateTime() {
 setInterval(updateDateTime, 1000);
 
 updateDateTime();
-
+$('#gear').click(function(){
+    $('.settingsPopup').css('display', 'flex')
+    $('.wrapBackgroundContainer').css('display', 'flex')
+})
 $('#addJuice').click(function(){
     $('.createGoodsPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')
