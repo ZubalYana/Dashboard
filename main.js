@@ -26,6 +26,10 @@ $('#gear').click(function(){
     $('.settingsPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')
 })
+$('#xmark').click(function(){
+    $('.settingsPopup').css('display', 'none')
+    $('.wrapBackgroundContainer').css('display', 'none')
+})
 $('#addJuice').click(function(){
     $('.createGoodsPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')

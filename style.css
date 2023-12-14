@@ -437,7 +437,7 @@
   display: none;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
   position: fixed;
   top: 30%;
   left: 50%;
@@ -448,4 +448,11 @@
   border-radius: 10px;
   justify-content: space-between;
   z-index: 9999;
+}
+.settingsPopup #xmark {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 24px;
+  color: #001C30;
 }/*# sourceMappingURL=style.css.map */
