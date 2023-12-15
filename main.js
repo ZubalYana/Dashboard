@@ -23,6 +23,7 @@ setInterval(updateDateTime, 1000);
 
 updateDateTime();
 $('#gear').click(function(){
+    $('#clickAudio')[0].play();
     $('.settingsPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')
 })
@@ -31,6 +32,7 @@ $('#xmark').click(function(){
     $('.wrapBackgroundContainer').css('display', 'none')
 })
 $('#addJuice').click(function(){
+    $('#clickAudio')[0].play();
     $('.createGoodsPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')
 })
@@ -49,6 +51,7 @@ $('#cancelCreateGoods').click(function(){
    }
  }
 $('#createGoodsBtn').click(function(){
+    $('#clickAudio')[0].play();
     if($('.GoodsName').val()){
         let newGoods = {
             name: $('.GoodsName').val(),
@@ -69,6 +72,7 @@ $('#createGoodsBtn').click(function(){
 })
 
 $('#orderBtn').click(function(){
+    $('#clickAudio')[0].play();
     $('.orderPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')
 })
@@ -102,6 +106,7 @@ function init(){
 }
 init();
 $('.Order').click(function(){
+    $('#clickAudio')[0].play();
     $('.orderPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')
 })
@@ -112,7 +117,6 @@ let data = JSON.parse(localStorage.getItem('db'))
 let spendedMoney = 0;
 
 $('#createOrder').click(function () {
-    
     let newOrder = {
         name: $('#orderName').val(),
         price: parseInt($('.orderPrice').val()),
@@ -141,6 +145,7 @@ $('#createOrder').click(function () {
 
 
 $('#sellBtn').click(function(){
+    $('#clickAudio')[0].play();
     $('#sellName').empty();
     $('.sellPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')
@@ -153,12 +158,13 @@ $('#sellBtn').click(function(){
     countBalance()
 })
 $('#cancelSell').click(function(){
-    
     $('.sellPopup').css('display', 'none')
     $('.wrapBackgroundContainer').css('display', 'none')
  })
 
  $('.Sell').click(function(){
+    $('#clickAudio')[0].play();
+
     $('#sellName').empty();
     $('.sellPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')
@@ -250,6 +256,14 @@ function countBalance(){
 
 
 $('#language').click(function(){
+    $('#clickAudio')[0].play();
     $('.settingsPopup_generalScreen').css('display', 'none')
     $('.settingsPopup_languagescreen').css('display', 'flex')
 })
+
+$('.buttonsContainer_row_button').click(() => {
+    $('#clickAudio')[0].play();
+
+})
+
+
