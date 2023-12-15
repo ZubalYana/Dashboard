@@ -267,3 +267,69 @@ $('.buttonsContainer_row_button').click(() => {
 })
 
 
+//Language changer
+
+
+let semanticCore ={
+    x: {
+        "UK": "",
+        "Ukraine": "",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+}
+
+let allLang = ['UK', 'Ukraine', 'France', 'Japan', 'Portugal', 'Italy'];
+let lang = 'UK'
+
+Ukraine.onclick = function(){
+    lang = 'Ukraine'
+    console.log(lang)
+    changeUrl()
+}
+UK.onclick = function(){
+    lang = 'UK'
+    console.log(lang)
+    changeUrl()
+}
+France.onclick = function(){
+    lang = 'France'
+    console.log(lang)
+    changeUrl()
+}
+Japan.onclick = function(){
+    lang = 'Japan'
+    console.log(lang)
+    changeUrl()
+}
+Portugal.onclick = function(){
+    lang = 'Portugal'
+    console.log(lang)
+    changeUrl()
+}
+Italy.onclick = function(){
+    lang = 'Italy'
+    console.log(lang)
+    changeUrl()
+}
+function changeUrl(){
+    location.href = window.location.pathname + '#' + lang;
+    location.reload();
+}
+
+function changeLanguage(){
+    let hash = (window.location.hash).substring(1)
+    console.log(hash)
+    if(!allLang.includes(hash)){
+        location.href = window.location.pathname + '#UK'
+        location.reload();
+    }
+
+    for(let key in semanticCore){
+        document.querySelector('.language-' + key).innerText = semanticCore[key][hash]
+    }
+}
+
+changeLanguage()

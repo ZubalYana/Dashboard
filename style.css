@@ -471,7 +471,21 @@
   display: flex;
 }
 .settingsPopup .settingsPopup_languagescreen {
-  flex-direction: column;
   align-items: center;
   display: none;
+  flex-direction: column;
+}
+.settingsPopup .settingsPopup_languagescreen h1 {
+  font-size: 24px;
+  font-weight: 800;
+}
+.settingsPopup .settingsPopup_languagescreen .settingsPopup_languageImg {
+  width: 90px;
+  margin: 20px;
+  cursor: pointer;
+}
+.settingsPopup .settingsPopup_languagescreen .settingPopup_languagesCon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
