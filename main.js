@@ -232,13 +232,13 @@ function updateChart(){
             plugins: {
                 legend: {
                     labels: {
-                        color: '#64CCC5', // Change this to the desired color for the labels
+                        color: '#64CCC5', 
                     }
                 }
             },
             elements: {
                 arc: {
-                    borderColor: '#1a7391' // Change this to the desired color for the border
+                    borderColor: '#1a7391'
                 }
             }
         }
@@ -267,18 +267,195 @@ $('.buttonsContainer_row_button').click(() => {
 })
 
 
+
+
 //Language changer
 
-
 let semanticCore ={
-    x: {
-        "UK": "",
-        "Ukraine": "",
+    h1Settings: {
+        "UK": "Settings",
+        "Ukraine": "Налаштування",
         "France": "",
         "Japan": "",
         "Portugal": "",
         "Italy": ""
     },
+    h1ChooseALanguage: {
+        "UK": "Choose a language",
+        "Ukraine": "Вибрати мову",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    createAProduct: {
+        "UK": "Create a product",
+        "Ukraine": "Створити продукт",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    createBtn: {
+        "UK": "Create",
+        "Ukraine": "Створити",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    cancelBtn: {
+        "UK": "Cancel",
+        "Ukraine": "Скасувати",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    orderAProduct: {
+        "UK": "Order a product",
+        "Ukraine": "Замовити продукт",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    orderBtn: {
+        "UK": "Order",
+        "Ukraine": "Замовити",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    sellAProduct: {
+        "UK": "Sell a product",
+        "Ukraine": "Продати товар",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    atb: {
+        "UK": "ATB",
+        "Ukraine": "АТБ",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    rucavichka: {
+        "UK": "Rucavichka",
+        "Ukraine": "Рукавичка",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    silpo: {
+        "UK": "Silpo",
+        "Ukraine": "Сільпо",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    sellBtn: {
+        "UK": "Sell",
+        "Ukraine": "Продати",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    createJuiceBtn: {
+        "UK": "Create a product",
+        "Ukraine": "Створити продукт",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    orderGoodsBtn: {
+        "UK": "Order goods",
+        "Ukraine": "Замовити товар",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    sellProductsBtn: {
+        "UK": "Sell goods",
+        "Ukraine": "Продати товар",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    earnedMoney: {
+        "UK": `Earned: ${earnedMoney}$`,
+        "Ukraine": `Зароблено: ${earnedMoney}$`,
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    spendedMoney: {
+        "UK": `Spended: ${spendedMoney}$`,
+        "Ukraine": `Витрачено: ${spendedMoney}$`,
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    balance: {
+        "UK": `Balance: ${balance}$`,
+        "Ukraine": `Баланс: ${balance}$`,
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    helpBtn: {
+        "UK": "Help",
+        "Ukraine": "Допомога",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    contactsBtn: {
+        "UK": "Contacts",
+        "Ukraine": "Контакти",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    historyBtn: {
+        "UK": "History",
+        "Ukraine": "Історія",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    ordersBtn: {
+        "UK": "Orders",
+        "Ukraine": "Замовлення",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    // x: {
+    //     "UK": "",
+    //     "Ukraine": "",
+    //     "France": "",
+    //     "Japan": "",
+    //     "Portugal": "",
+    //     "Italy": ""
+    // },
 }
 
 let allLang = ['UK', 'Ukraine', 'France', 'Japan', 'Portugal', 'Italy'];
