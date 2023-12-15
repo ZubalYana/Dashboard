@@ -18,7 +18,7 @@
     <div class="settingsPopup">
         <i class="fa-solid fa-xmark" id="xmark"></i>
         <div class="settingsPopup_generalScreen">
-        <h1>Settings</h1>
+        <h1 class="language-h1Settings">Settings</h1>
         <div class="settingsPopup_languageAndTheme">
             <img id="language" class="settingsIcon" src="./img/world.png" alt="">
             <img id="theme" class="settingsIcon" src="./img/sun.png" alt="">
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="settingsPopup_languagescreen">
-        <h1>Choose a language</h1>
+        <h1 class="language-h1ChooseALanguage">Choose a language</h1>
         <div class="settingPopup_languagesCon">
         <img class="settingsPopup_languageImg" id="UK" src="./img/united-kingdom.png" alt="">
         <img class="settingsPopup_languageImg" id="Ukraine" src="./img/ukraine.png" alt="">
@@ -40,37 +40,37 @@
 
 
     <div class="createGoodsPopup">
-        <h2>Create a product</h2>
+        <h2 class="language-createAProduct">Create a product</h2>
         <input type="text" class="GoodsName createGoodsPopupInput" placeholder="Name">
         <input type="text" class="GoodsCategory createGoodsPopupInput" placeholder="Category">
         <input type="text" class="GoodsCount createGoodsPopupInput" placeholder="Count">
 
 
         <div class="popupBtn">
-            <button id="createGoodsBtn" class="PopupBtn">Create</button>
-            <button id="cancelCreateGoods" class="PopupBtn">Cancel</button>
+            <button id="createGoodsBtn" class="PopupBtn language-createBtn">Create</button>
+            <button id="cancelCreateGoods" class="PopupBtn language-cancelBtn">Cancel</button>
 
         </div>
     </div>
 
     <div class="orderPopup">
-        <h2>Order a product</h2>
+        <h2 class="language-orderAProduct">Order a product</h2>
         <select id="orderName" class="orderPopup_input"></select>
         <input type="text" class="orderCount orderPopup_input" placeholder="Count">
         <input type="text" class="orderPrice orderPopup_input" placeholder="Price (per liter)">
         <input type="text" class="deliveryPrice orderPopup_input" placeholder="Delivery Price">
         <div class="popupBtn">
-            <button id="createOrder" class="PopupBtn">Order</button>
-            <button id="cancelOrder" class="PopupBtn">Cancel</button>
+            <button id="createOrder" class="PopupBtn language-orderBtn">Order</button>
+            <button id="cancelOrder" class="PopupBtn language-cancelBtn">Cancel</button>
         </div>
     </div>
     <div class="sellPopup">
-        <h2>Sell a product</h2>
+        <h2 class="language-sellAProduct">Sell a product</h2>
         <select id="sellName" class="sellPopup_input"></select>
         <select type="text" class="sellCustomer sellPopup_input" placeholder="Customer">
-            <option value="ATB">ATB</option>
-            <option value="Rucavichka">Rucavichka</option>
-            <option value="Cilpo">Silpo</option>
+            <option value="ATB" class="language-atb">ATB</option>
+            <option value="Rucavichka" class="language-rucavichka">Rucavichka</option>
+            <option value="Cilpo" class="language-silpo">Silpo</option>
         </select>
         <input type="text" class="sellPrice sellPopup_input" placeholder="Price (per liter)">
         <input type="text" class="sellCount sellPopup_input" placeholder="Count">
@@ -78,8 +78,8 @@
 
 
         <div class="popupBtn">
-            <button id="SellSProduct" class="PopupBtn">Sell</button>
-            <button id="cancelSell" class="PopupBtn">Cancel</button>
+            <button id="SellSProduct" class="PopupBtn language-sellBtn">Sell</button>
+            <button id="cancelSell" class="PopupBtn language-cancelBtn">Cancel</button>
         </div>
 
     </div>
@@ -89,14 +89,14 @@
         <div class="header">
             <div class="logo"><img class="logoImg" src="./img/juice.png" alt=""> Juice</div>
             <div class="headerBtns">
-                <button id="addJuice" class="addJuice"><i class="fa-regular fa-square-plus btn_img"></i> Create a product</button>
-                <button id="orderBtn" class="orderBtn"><i class="fa-solid fa-cart-shopping btn_img"></i>Order goods</button>
-                <button id="sellBtn" class="sellBtn"><i class="fa-solid fa-cash-register btn_img"></i>Sell goods</button>
+                <button id="addJuice" class="addJuice language-createJuiceBtn"><i class="fa-regular fa-square-plus btn_img"></i> Create a product</button>
+                <button id="orderBtn" class="orderBtn language-orderGoodsBtn"><i class="fa-solid fa-cart-shopping btn_img"></i>Order goods</button>
+                <button id="sellBtn" class="sellBtn language-sellProductsBtn"><i class="fa-solid fa-cash-register btn_img"></i>Sell goods</button>
             </div>
             <div class="moneyCount">
-                <div class="earnedMoney moneyInfo" id="earnedMoney">Earned: 0$</div>
-                <div class="spendedMoney moneyInfo" id="spendedMoney">Spended: 0$</div>
-                <div class="balance moneyInfo" id="balance">Balance: 0$</div>
+                <div class="earnedMoney moneyInfo language-earnedMoney" id="earnedMoney">Earned: 0$</div>
+                <div class="spendedMoney moneyInfo language-spendedMoney" id="spendedMoney">Spended: 0$</div>
+                <div class="balance moneyInfo language-balance" id="balance">Balance: 0$</div>
             </div>
             <i class="fa-solid fa-gear" id="gear"></i>
             <div class="header_dateContainer">
@@ -118,12 +118,12 @@
               </div>
               <div class="buttonsContainer">
                 <div class="buttonsContainer_row" id="row1">
-                    <div class="buttonsContainer_row_button" id="Help">Help</div>
-                    <div class="buttonsContainer_row_button" id="Contacts">Contacts</div>
+                    <div class="buttonsContainer_row_button language-helpBtn" id="Help">Help</div>
+                    <div class="buttonsContainer_row_button language-contactsBtn" id="Contacts">Contacts</div>
                 </div>
                 <div class="buttonsContainer_row" id="row2">
-                    <div class="buttonsContainer_row_button" id="History">History</div>
-                    <div class="buttonsContainer_row_button" id="Orders">Orders</div>
+                    <div class="buttonsContainer_row_button language-historyBtn" id="History">History</div>
+                    <div class="buttonsContainer_row_button language-ordersBtn" id="Orders">Orders</div>
                 </div>
               </div>
             </div>
