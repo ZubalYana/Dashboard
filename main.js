@@ -10,6 +10,7 @@ function updateDateTime() {
     let year = currentDate.getFullYear();
     
     let daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
     let dayOfWeek = daysOfWeek[currentDate.getDay()];
 
     let hours = currentDate.getHours();
@@ -34,6 +35,11 @@ $('#gear').click(function(){
 $('#xmark').click(function(){
     $('.settingsPopup').css('display', 'none')
     $('.wrapBackgroundContainer').css('display', 'none')
+})
+$('#xmarkLanguage').click(()=>{
+    $('.settingsPopup_languagescreen').css('display', 'none')
+    $('.settingsPopup_generalScreen').css('display', 'flex')
+
 })
 $('#addJuice').click(function(){
     $('#clickAudio')[0].play();
@@ -533,6 +539,15 @@ function changeLanguage(){
     } else if(hash === 'UK'){
         daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     }
+    $('#UK').click(() => {
+        daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        updateDateTime(); // You may want to update the date and time when the language changes
+    });
+    
+    $('#Ukraine').click(() => {
+        daysOfWeek = ['Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четвер', 'П\'ятниця', 'Субота'];
+        updateDateTime(); // You may want to update the date and time when the language changes
+    });
     updateDateTime();
 
 }

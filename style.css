@@ -448,7 +448,7 @@
   border-radius: 10px;
   z-index: 9999;
 }
-.settingsPopup #xmark {
+.settingsPopup .xmark {
   position: absolute;
   top: 30px;
   right: 30px;
