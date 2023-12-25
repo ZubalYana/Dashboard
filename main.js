@@ -50,9 +50,16 @@ $('#cancelCreateGoods').click(function(){
     $('.wrapBackgroundContainer').css('display', 'none')
  })
 
+
+ //theme changing
  $('#theme').click(()=>{
-    $('.settingsPopup_generalScreen').css('diplay', 'none');
-    $('.settingsPopup_theme').css('diplay', 'flex');
+    $('#clickAudio')[0].play();
+    $('.settingsPopup_generalScreen').css('display', 'none')
+    $('.settingsPopup_theme').css('display', 'flex')
+})
+$('#xmarkTheme').click(()=>{
+    $('.settingsPopup_generalScreen').css('display', 'flex')
+    $('.settingsPopup_theme').css('display', 'none')
 })
 
 
