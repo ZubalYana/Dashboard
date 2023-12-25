@@ -26,13 +26,14 @@
   padding: 26px;
 }
 .wrap .wrapBackgroundContainer {
-  width: 95%;
-  height: 95%;
+  width: 100%;
+  height: 100%;
   position: absolute;
   background-color: rgba(0, 28, 48, 0.8196078431);
   top: 0px;
   z-index: 999;
   display: none;
+  margin-left: -26px;
 }
 .wrap .header {
   width: 267px;
@@ -478,6 +479,18 @@
 .settingsPopup .settingsPopup_theme h1 {
   font-size: 24px;
   font-weight: 800;
+}
+.settingsPopup .settingsPopup_theme .settingsPopup_theme_moonAndSunCon {
+  width: 450px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.settingsPopup .settingsPopup_theme .settingsPopup_theme_el {
+  font-size: 120px;
+  cursor: pointer;
+  color: #001C30;
 }
 .settingsPopup .settingsPopup_languagescreen {
   align-items: center;

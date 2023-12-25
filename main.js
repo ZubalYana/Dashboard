@@ -62,7 +62,25 @@ $('#xmarkTheme').click(()=>{
     $('.settingsPopup_theme').css('display', 'none')
 })
 
+let theme = 'dark'
+function themeChanging(){
+    $('#moon').click(()=>{
+        $('#clickAudio')[0].play();
+        $('.wrap').css('background-color', '#001C30')
+        $('.wrapBackgroundContainer').css('background-color', '#001c30d1')
+        theme = 'dark';
+    })
+    $('#sun').click(()=>{
+        $('#clickAudio')[0].play();
+        $('.wrap').css('background-color', '#ffffff')
+        $('.wrapBackgroundContainer').css('background-color', '#85b7dcd1')
+        theme = 'light'
+    })
+}
+themeChanging();
 
+
+//localStorage saving goods
  let dbString = localStorage.getItem('db');
  let db = [];
  if (dbString) {
@@ -72,6 +90,7 @@ $('#xmarkTheme').click(()=>{
      console.error('Error parsing JSON:', error);
    }
  }
+
  //create goods
 $('#createGoodsBtn').click(function(){
     $('#clickAudio')[0].play();
