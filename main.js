@@ -1,3 +1,7 @@
+
+
+
+
 function updateDateTime() {
     let currentDate = new Date();
     
@@ -93,8 +97,8 @@ function init(){
         $('.drinkStorage').append(`
         <div class="drinkItem">
         <div class="drinkItem_buttons">
-            <button class="Order">Order</button>
-            <button class="Sell">Sell</button>
+            <button class="Order language-Order">Order</button>
+            <button class="Sell language-Sell">Sell</button>
         </div>
         <img class="drinkItem_img" src="./img/${el.name}.png" alt="">
         <div class="drinkItem_name">${el.name}</div>
@@ -219,6 +223,7 @@ function updateChart(){
             '#13637E',
             '#3f9a94',
             '#64CCC5',
+            '#68c1de',
     
           ],
           hoverOffset: 4
@@ -448,14 +453,30 @@ let semanticCore ={
         "Portugal": "",
         "Italy": ""
     },
-    // x: {
-    //     "UK": "",
-    //     "Ukraine": "",
-    //     "France": "",
-    //     "Japan": "",
-    //     "Portugal": "",
-    //     "Italy": ""
-    // },
+    Order: {
+        "UK": "Order",
+        "Ukraine": "Замовити",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    Sell: {
+        "UK": "Sell",
+        "Ukraine": "Продати",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    x: {
+        "UK": "",
+        "Ukraine": "",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
 }
 
 let allLang = ['UK', 'Ukraine', 'France', 'Japan', 'Portugal', 'Italy'];
@@ -507,6 +528,13 @@ function changeLanguage(){
     for(let key in semanticCore){
         document.querySelector('.language-' + key).innerText = semanticCore[key][hash]
     }
+    if (hash === 'Ukraine') {
+        daysOfWeek = ['Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четвер', 'П\'ятниця', 'Субота'];
+    } else if(hash === 'UK'){
+        daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    }
+    updateDateTime();
+
 }
 
 changeLanguage()

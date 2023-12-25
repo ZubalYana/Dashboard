@@ -231,7 +231,7 @@
   margin-top: 20px;
 }
 .wrap .buttonsContainer .buttonsContainer_row_button {
-  width: 150px;
+  width: 170px;
   height: 80px;
   background-color: #13637E;
   color: #64CCC5;
@@ -248,13 +248,13 @@
   font-weight: 600;
 }
 .wrap .buttonsContainer #Contacts {
-  margin-left: 170px;
+  margin-left: 190px;
 }
 .wrap .buttonsContainer #History {
-  margin-left: 160px;
+  margin-left: 180px;
 }
 .wrap .buttonsContainer #Orders {
-  margin-left: 170px;
+  margin-left: 190px;
 }
 .wrap .buttonsContainer .buttonsContainer_row_button:hover {
   background-color: #64CCC5;
