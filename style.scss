@@ -483,6 +483,15 @@
         align-items: center;
         display: flex;
     }
+    .settingsPopup_theme{
+        align-items: center;
+        display: none;
+        flex-direction: column;
+        h1{
+            font-size: 24px;
+            font-weight: 800;
+        }
+    }
     .settingsPopup_languagescreen{
         align-items: center;
         display: none;

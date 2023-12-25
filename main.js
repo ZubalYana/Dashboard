@@ -1,7 +1,7 @@
 
 
 
-
+//change time
 function updateDateTime() {
     let currentDate = new Date();
     
@@ -23,10 +23,9 @@ function updateDateTime() {
     document.querySelector('.header_currentDate').textContent = formattedDate;
     document.querySelector('.header_currentTime').textContent = formattedTime;
 }
-
 setInterval(updateDateTime, 1000);
-
 updateDateTime();
+
 $('#gear').click(function(){
     $('#clickAudio')[0].play();
     $('.settingsPopup').css('display', 'flex')
@@ -50,9 +49,15 @@ $('#cancelCreateGoods').click(function(){
     $('.createGoodsPopup').css('display', 'none')
     $('.wrapBackgroundContainer').css('display', 'none')
  })
+
+ $('#theme').click(()=>{
+    $('.settingsPopup_generalScreen').css('diplay', 'none');
+    $('.settingsPopup_theme').css('diplay', 'flex');
+})
+
+
  let dbString = localStorage.getItem('db');
  let db = [];
- 
  if (dbString) {
    try {
      db = JSON.parse(dbString);
@@ -60,6 +65,7 @@ $('#cancelCreateGoods').click(function(){
      console.error('Error parsing JSON:', error);
    }
  }
+ //create goods
 $('#createGoodsBtn').click(function(){
     $('#clickAudio')[0].play();
     if($('.GoodsName').val()){
@@ -80,13 +86,11 @@ $('#createGoodsBtn').click(function(){
     }
     window.location.reload();
 })
-
 $('#orderBtn').click(function(){
     $('#clickAudio')[0].play();
     $('.orderPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')
 })
-
 $('#cancelOrder').click(function(){
     $('.orderPopup').css('display', 'none')
     $('.wrapBackgroundContainer').css('display', 'none')
@@ -94,7 +98,7 @@ $('#cancelOrder').click(function(){
 
 
 
-
+//goods apperience
 function init(){
     let data = JSON.parse(localStorage.getItem('db'))
     console.log(data)
@@ -124,8 +128,9 @@ $('.Order').click(function(){
 let data = JSON.parse(localStorage.getItem('db'))
 
 
-let spendedMoney = 0;
 
+
+//Ordering
 $('#createOrder').click(function () {
     let newOrder = {
         name: $('#orderName').val(),
@@ -153,7 +158,7 @@ $('#createOrder').click(function () {
 });
 
 
-
+//Seling
 $('#sellBtn').click(function(){
     $('#clickAudio')[0].play();
     $('#sellName').empty();
@@ -171,7 +176,6 @@ $('#cancelSell').click(function(){
     $('.sellPopup').css('display', 'none')
     $('.wrapBackgroundContainer').css('display', 'none')
  })
-
  $('.Sell').click(function(){
     $('#clickAudio')[0].play();
 
@@ -186,7 +190,6 @@ $('#cancelSell').click(function(){
     updateChart();
     countBalance()
 })
-let earnedMoney = 0;
  $('#SellSProduct').click(function(){
     let newSell = {
         name: $('#sellName').val(),
@@ -214,6 +217,8 @@ let earnedMoney = 0;
     countBalance()
 })
 
+
+//chart work
 let myChart;
 function updateChart(){
     const ctx = document.getElementById('myChart');
@@ -260,6 +265,10 @@ function updateChart(){
 }
 updateChart();
 
+
+//balance and money counting
+let spendedMoney = 0;
+let earnedMoney = 0;
 let balance = 0;
 function countBalance(){
     $('#balance').html(`Balance: ${earnedMoney - spendedMoney}$`)
@@ -271,7 +280,6 @@ $('#language').click(function(){
     $('.settingsPopup_generalScreen').css('display', 'none')
     $('.settingsPopup_languagescreen').css('display', 'flex')
 })
-
 $('.buttonsContainer_row_button').click(() => {
     $('#clickAudio')[0].play();
 
@@ -280,8 +288,7 @@ $('.buttonsContainer_row_button').click(() => {
 
 
 
-//Language changer
-
+//Language change
 let semanticCore ={
     h1Settings: {
         "UK": "Settings",
@@ -484,7 +491,6 @@ let semanticCore ={
         "Italy": ""
     },
 }
-
 let allLang = ['UK', 'Ukraine', 'France', 'Japan', 'Portugal', 'Italy'];
 let lang = 'UK'
 
@@ -522,7 +528,6 @@ function changeUrl(){
     location.href = window.location.pathname + '#' + lang;
     location.reload();
 }
-
 function changeLanguage(){
     let hash = (window.location.hash).substring(1)
     console.log(hash)
@@ -551,5 +556,6 @@ function changeLanguage(){
     updateDateTime();
 
 }
-
 changeLanguage()
+
+

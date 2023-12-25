@@ -470,6 +470,15 @@
   align-items: center;
   display: flex;
 }
+.settingsPopup .settingsPopup_theme {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+}
+.settingsPopup .settingsPopup_theme h1 {
+  font-size: 24px;
+  font-weight: 800;
+}
 .settingsPopup .settingsPopup_languagescreen {
   align-items: center;
   display: none;
