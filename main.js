@@ -26,6 +26,8 @@ function updateDateTime() {
 setInterval(updateDateTime, 1000);
 updateDateTime();
 
+
+//clicks
 $('#gear').click(function(){
     $('#clickAudio')[0].play();
     $('.settingsPopup').css('display', 'flex')
@@ -133,13 +135,13 @@ function init(){
         $('.drinkStorage').append(`
         <div class="drinkItem">
         <div class="drinkItem_buttons">
-            <button class="Order language-Order">Order</button>
-            <button class="Sell language-Sell">Sell</button>
+            <button class="Order language-order">Order</button>
+            <button class="Sell language-sell">Sell</button>
         </div>
         <img class="drinkItem_img" src="./img/${el.name}.png" alt="">
         <div class="drinkItem_name">${el.name}</div>
         <div class="drinkItem_taste">${el.category}</div>
-        <div class="drinkItem_count" data-drink-name="${el.name}">count: ${el.count}L</div>
+        <div class="drinkItem_count" data-drink-name="${el.name} language-count">count: ${el.count}L</div>
     </div>
     `)
     }
@@ -492,25 +494,17 @@ let semanticCore ={
         "Portugal": "",
         "Italy": ""
     },
-    Order: {
+    order: {
         "UK": "Order",
-        "Ukraine": "Замовити",
+        "Ukraine": "Зам.",
         "France": "",
         "Japan": "",
         "Portugal": "",
         "Italy": ""
     },
-    Sell: {
+    sell: {
         "UK": "Sell",
-        "Ukraine": "Продати",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
-    },
-    x: {
-        "UK": "",
-        "Ukraine": "",
+        "Ukraine": "Прод.",
         "France": "",
         "Japan": "",
         "Portugal": "",
