@@ -340,6 +340,14 @@ let semanticCore ={
         "Portugal": "",
         "Italy": ""
     },
+    createJuiceBtntext: {
+        "UK": "Create a product",
+        "Ukraine": "Створити продукт",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
     createBtn: {
         "UK": "Create",
         "Ukraine": "Створити",
@@ -364,6 +372,14 @@ let semanticCore ={
         "Portugal": "",
         "Italy": ""
     },
+    orderGoodsBtntext: {
+        "UK": "Order a product",
+        "Ukraine": "Замовити продукт",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
     orderBtn: {
         "UK": "Order",
         "Ukraine": "Замовити",
@@ -373,6 +389,14 @@ let semanticCore ={
         "Italy": ""
     },
     sellAProduct: {
+        "UK": "Sell a product",
+        "Ukraine": "Продати товар",
+        "France": "",
+        "Japan": "",
+        "Portugal": "",
+        "Italy": ""
+    },
+    sellProductsBtntext: {
         "UK": "Sell a product",
         "Ukraine": "Продати товар",
         "France": "",
@@ -407,30 +431,6 @@ let semanticCore ={
     sellBtn: {
         "UK": "Sell",
         "Ukraine": "Продати",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
-    },
-    createJuiceBtn: {
-        "UK": "Create a product",
-        "Ukraine": "Створити продукт",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
-    },
-    orderGoodsBtn: {
-        "UK": "Order goods",
-        "Ukraine": "Замовити товар",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
-    },
-    sellProductsBtn: {
-        "UK": "Sell goods",
-        "Ukraine": "Продати товар",
         "France": "",
         "Japan": "",
         "Portugal": "",
