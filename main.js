@@ -328,203 +328,206 @@ $('.buttonsContainer_row_button').click(() => {
 
 
 //Language change
-let semanticCore ={
+let semanticCore = {
     h1Settings: {
         "UK": "Settings",
         "Ukraine": "Налаштування",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Paramètres",
+        "Japan": "設定",
+        "Portugal": "Configurações",
+        "Italy": "Impostazioni"
     },
     h1ChooseALanguage: {
         "UK": "Choose a language",
         "Ukraine": "Вибрати мову",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Choisir une langue",
+        "Japan": "言語を選択",
+        "Portugal": "Escolher um idioma",
+        "Italy": "Scegli una lingua"
     },
     createAProduct: {
         "UK": "Create a product",
         "Ukraine": "Створити продукт",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Créer un produit",
+        "Japan": "製品を作成",
+        "Portugal": "Criar um produto",
+        "Italy": "Crea un prodotto"
     },
     createJuiceBtntext: {
         "UK": "Create a product",
         "Ukraine": "Створити продукт",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Créer un produit",
+        "Japan": "製品を作成",
+        "Portugal": "Criar um produto",
+        "Italy": "Crea un prodotto"
     },
     createBtn: {
         "UK": "Create",
         "Ukraine": "Створити",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Créer",
+        "Japan": "作成する",
+        "Portugal": "Criar",
+        "Italy": "Crea"
     },
     cancelBtn: {
         "UK": "Cancel",
         "Ukraine": "Скасувати",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Annuler",
+        "Japan": "キャンセル",
+        "Portugal": "Cancelar",
+        "Italy": "Annulla"
     },
     orderAProduct: {
         "UK": "Order a product",
         "Ukraine": "Замовити продукт",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Commander un produit",
+        "Japan": "製品を注文",
+        "Portugal": "Encomendar um produto",
+        "Italy": "Ordina un prodotto"
     },
     orderGoodsBtntext: {
         "UK": "Order a product",
         "Ukraine": "Замовити продукт",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Commander un produit",
+        "Japan": "製品を注文",
+        "Portugal": "Encomendar um produto",
+        "Italy": "Ordina un prodotto"
     },
     orderBtn: {
         "UK": "Order",
         "Ukraine": "Замовити",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Commander",
+        "Japan": "注文",
+        "Portugal": "Encomendar",
+        "Italy": "Ordina"
     },
     sellAProduct: {
         "UK": "Sell a product",
         "Ukraine": "Продати товар",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Vendre un produit",
+        "Japan": "製品を売る",
+        "Portugal": "Vender um produto",
+        "Italy": "Vendi un prodotto"
     },
     sellProductsBtntext: {
         "UK": "Sell a product",
         "Ukraine": "Продати товар",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Vendre un produit",
+        "Japan": "製品を売る",
+        "Portugal": "Vender um produto",
+        "Italy": "Vendi un prodotto"
     },
     atb: {
-        "UK": "ATB",
+        "UK": "АТB",
         "Ukraine": "АТБ",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "АТB",  
+        "Japan": "АТB",  
+        "Portugal": "АТB",  
+        "Italy": "АТB"  
     },
     rucavichka: {
         "UK": "Rucavichka",
         "Ukraine": "Рукавичка",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Rucavichka",  
+        "Japan": "Rucavichka", 
+        "Portugal": "Rucavichka",  
+        "Italy": "Rucavichka"  
     },
     silpo: {
         "UK": "Silpo",
         "Ukraine": "Сільпо",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Silpo", 
+        "Japan": "Silpo",  
+        "Portugal": "Silpo",  
+        "Italy": "Silpo"  
     },
     sellBtn: {
         "UK": "Sell",
         "Ukraine": "Продати",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": "Vendre",
+        "Japan": "売る",
+        "Portugal": "Vender",
+        "Italy": "Vendi"
     },
     earnedMoney: {
         "UK": `Earned: ${earnedMoney}$`,
         "Ukraine": `Зароблено: ${earnedMoney}$`,
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": `Gagné : ${earnedMoney} $`,
+        "Japan": `獲得金額：${earnedMoney} $`,
+        "Portugal": `Ganho: ${earnedMoney} $`,
+        "Italy": `Guadagnato: ${earnedMoney} $`
     },
     spendedMoney: {
         "UK": `Spended: ${spendedMoney}$`,
         "Ukraine": `Витрачено: ${spendedMoney}$`,
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
+        "France": `Dépensé : ${spendedMoney} $`,
+        "Japan": `支出金額：${spendedMoney} $`,
+        "Portugal": `Gasto: ${spendedMoney} $`,
+        "Italy": `Speso: ${spendedMoney} $`
     },
-    balance: {
-        "UK": `Balance: ${balance}$`,
-        "Ukraine": `Баланс: ${balance}$`,
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
-    },
-    helpBtn: {
-        "UK": "Help",
-        "Ukraine": "Допомога",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
-    },
-    contactsBtn: {
-        "UK": "Contacts",
-        "Ukraine": "Контакти",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
-    },
-    historyBtn: {
-        "UK": "History",
-        "Ukraine": "Історія",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
-    },
-    ordersBtn: {
-        "UK": "Orders",
-        "Ukraine": "Замовлення",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
-    },
-    order: {
-        "UK": "Order",
-        "Ukraine": "Зам.",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
-    },
-    sell: {
-        "UK": "Sell",
-        "Ukraine": "Прод.",
-        "France": "",
-        "Japan": "",
-        "Portugal": "",
-        "Italy": ""
-    },
+
+balance: {
+    "UK": `Balance: ${balance}$`,
+    "Ukraine": `Баланс: ${balance}$`,
+    "France": `Solde : ${balance} $`,
+    "Japan": `残高：${balance} $`,
+    "Portugal": `Saldo: ${balance} $`,
+    "Italy": `Bilancio: ${balance} $`
+},
+helpBtn: {
+    "UK": "Help",
+    "Ukraine": "Допомога",
+    "France": "Aide",
+    "Japan": "ヘルプ",
+    "Portugal": "Ajuda",
+    "Italy": "Aiuto"
+},
+contactsBtn: {
+    "UK": "Contacts",
+    "Ukraine": "Контакти",
+    "France": "Contacts",
+    "Japan": "連絡先",
+    "Portugal": "Contatos",
+    "Italy": "Contatti"
+},
+historyBtn: {
+    "UK": "History",
+    "Ukraine": "Історія",
+    "France": "Histoire",
+    "Japan": "履歴",
+    "Portugal": "História",
+    "Italy": "Storia"
+},
+ordersBtn: {
+    "UK": "Orders",
+    "Ukraine": "Замовлення",
+    "France": "Commandes",
+    "Japan": "注文",
+    "Portugal": "Pedidos",
+    "Italy": "Ordini"
+},
+order: {
+    "UK": "Order",
+    "Ukraine": "Зам.",
+    "France": "Commande",
+    "Japan": "注文",
+    "Portugal": "Ordem",
+    "Italy": "Ordine"
+},
+sell: {
+    "UK": "Sell",
+    "Ukraine": "Прод.",
+    "France": "Vendre",
+    "Japan": "売る",
+    "Portugal": "Vender",
+    "Italy": "Vendi"
+}
+
+// ... (continue with the rest of your code)
+
 }
 let allLang = ['UK', 'Ukraine', 'France', 'Japan', 'Portugal', 'Italy'];
 let lang = 'UK'
-
 Ukraine.onclick = function(){
     lang = 'Ukraine'
     console.log(lang)
