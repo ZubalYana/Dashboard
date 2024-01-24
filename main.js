@@ -65,7 +65,7 @@ $('#xmarkTheme').click(()=>{
 })
 
 let theme = 'dark'
-function themeChanging(){
+function themeChanging(updatedData){
     $('#moon').click(()=>{
         $('#clickAudio')[0].play();
         $('.wrap').css('background-color', '#001C30')
@@ -76,6 +76,7 @@ function themeChanging(){
         $('.drinkItem_taste').css('color', '#001C30')
         $('.drinkItem_count').css('color', '#001C30')
         $('.drinkItem_buttons button').css('background-color', '#64CCC5')
+
         theme = 'dark';
     })
     $('#sun').click(()=>{
@@ -259,21 +260,22 @@ $('#cancelSell').click(function(){
 
 //chart work
 let myChart;
+let updatedData;
 function updateChart(){
     const ctx = document.getElementById('myChart');
     if (myChart) {
         myChart.destroy();
     }
-    const updatedData = {
+    updatedData = {
         labels: data.map(el => el.name),
         datasets: [{
           label: 'Drinks',
           data: data.map(el => parseInt(el.count)),
           backgroundColor: [
-            '#13637E',
-            '#3f9a94',
-            '#64CCC5',
-            '#68c1de',
+            '#13637eba',
+            '#3f9a94b7',
+            '#64ccc5c1',
+            '#68c1deb3',
     
           ],
           hoverOffset: 4
@@ -287,7 +289,7 @@ function updateChart(){
             plugins: {
                 legend: {
                     labels: {
-                        color: '#64CCC5', 
+                        color: '#40b5dbda', 
                     }
                 }
             },
@@ -312,8 +314,6 @@ let balance = 0;
 function countBalance(){
     $('#balance').html(`Balance: ${earnedMoney - spendedMoney}$`)
 }
-
-
 $('#language').click(function(){
     $('#clickAudio')[0].play();
     $('.settingsPopup_generalScreen').css('display', 'none')
