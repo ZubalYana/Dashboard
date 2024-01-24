@@ -70,12 +70,24 @@ function themeChanging(){
         $('#clickAudio')[0].play();
         $('.wrap').css('background-color', '#001C30')
         $('.wrapBackgroundContainer').css('background-color', '#001c30d1')
+        $('.headerBtns button').css('background-color', '#13637E')
+        $('.drinkItem').css('background-color', '#13637E')
+        $('.drinkItem_name').css('color', '#001C30')
+        $('.drinkItem_taste').css('color', '#001C30')
+        $('.drinkItem_count').css('color', '#001C30')
+        $('.drinkItem_buttons button').css('background-color', '#64CCC5')
         theme = 'dark';
     })
     $('#sun').click(()=>{
         $('#clickAudio')[0].play();
         $('.wrap').css('background-color', '#ffffff')
         $('.wrapBackgroundContainer').css('background-color', '#85b7dcd1')
+        $('.headerBtns button').css('background-color', '#fff')
+        $('.drinkItem').css('background-color', '#64ccc54f')
+        $('.drinkItem_name').css('color', '#13637E')
+        $('.drinkItem_taste').css('color', '#13637E')
+        $('.drinkItem_count').css('color', '#13637E')
+        $('.drinkItem_buttons button').css('background-color', '#64ccc54f')
         theme = 'light'
     })
 }
@@ -152,7 +164,6 @@ $('.Order').click(function(){
     $('.orderPopup').css('display', 'flex')
     $('.wrapBackgroundContainer').css('display', 'flex')
 })
-
 let data = JSON.parse(localStorage.getItem('db'))
 
 
