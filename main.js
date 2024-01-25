@@ -1,6 +1,4 @@
 
-
-
 //change time
 function updateDateTime() {
     let currentDate = new Date();
@@ -63,7 +61,6 @@ $('#xmarkTheme').click(()=>{
     $('.settingsPopup_generalScreen').css('display', 'flex')
     $('.settingsPopup_theme').css('display', 'none')
 })
-
 let theme = 'dark'
 function themeChanging(updatedData){
     $('#moon').click(()=>{
@@ -80,8 +77,7 @@ function themeChanging(updatedData){
         $('.orderPopup').css('background-color', '#1a7391')
         $('.sellPopup').css('background-color', '#1a7391')
         $('.settingsPopup').css('background-color', '#1a7391')
-        $('.orderPopup').css('background-color', '#1a7391')
-
+        $('.createGoodsPopupInput').css('background-color', '#1a7391')
         theme = 'dark';
     })
     $('#sun').click(()=>{
@@ -98,8 +94,7 @@ function themeChanging(updatedData){
         $('.orderPopup').css('background-color', '#add6e3')
         $('.sellPopup').css('background-color', '#add6e3')
         $('.settingsPopup').css('background-color', '#add6e3')
-        $('.orderPopup').css('background-color', '#add6e3')
-
+        $('.createGoodsPopupInput').css('background-color', '#001c304b')
         theme = 'light'
     })
 }
@@ -148,8 +143,6 @@ $('#cancelOrder').click(function(){
     $('.wrapBackgroundContainer').css('display', 'none')
 })
 
-
-
 //goods apperience
 function init(){
     let data = JSON.parse(localStorage.getItem('db'))
@@ -177,8 +170,6 @@ $('.Order').click(function(){
     $('.wrapBackgroundContainer').css('display', 'flex')
 })
 let data = JSON.parse(localStorage.getItem('db'))
-
-
 
 
 //Ordering
