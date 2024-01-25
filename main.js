@@ -76,6 +76,11 @@ function themeChanging(updatedData){
         $('.drinkItem_taste').css('color', '#001C30')
         $('.drinkItem_count').css('color', '#001C30')
         $('.drinkItem_buttons button').css('background-color', '#64CCC5')
+        $('.createGoodsPopup').css('background-color', '#1a7391')
+        $('.orderPopup').css('background-color', '#1a7391')
+        $('.sellPopup').css('background-color', '#1a7391')
+        $('.settingsPopup').css('background-color', '#1a7391')
+        $('.orderPopup').css('background-color', '#1a7391')
 
         theme = 'dark';
     })
@@ -89,6 +94,12 @@ function themeChanging(updatedData){
         $('.drinkItem_taste').css('color', '#13637E')
         $('.drinkItem_count').css('color', '#13637E')
         $('.drinkItem_buttons button').css('background-color', '#64ccc54f')
+        $('.createGoodsPopup').css('background-color', '#add6e3')
+        $('.orderPopup').css('background-color', '#add6e3')
+        $('.sellPopup').css('background-color', '#add6e3')
+        $('.settingsPopup').css('background-color', '#add6e3')
+        $('.orderPopup').css('background-color', '#add6e3')
+
         theme = 'light'
     })
 }

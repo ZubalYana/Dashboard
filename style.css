@@ -490,6 +490,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-top: 30px;
 }
 .settingsPopup .settingsPopup_theme .settingsPopup_theme_el {
   font-size: 120px;
