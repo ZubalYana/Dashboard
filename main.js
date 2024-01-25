@@ -52,18 +52,56 @@ $('#cancelCreateGoods').click(function(){
 
 
  //theme changing
- $('#theme').click(()=>{
-    $('#clickAudio')[0].play();
-    $('.settingsPopup_generalScreen').css('display', 'none')
-    $('.settingsPopup_theme').css('display', 'flex')
-})
-$('#xmarkTheme').click(()=>{
-    $('.settingsPopup_generalScreen').css('display', 'flex')
-    $('.settingsPopup_theme').css('display', 'none')
-})
-let theme = 'dark'
-function themeChanging(updatedData){
-    $('#moon').click(()=>{
+//  $('#theme').click(()=>{
+//     $('#clickAudio')[0].play();
+//     $('.settingsPopup_generalScreen').css('display', 'none')
+//     $('.settingsPopup_theme').css('display', 'flex')
+// })
+// $('#xmarkTheme').click(()=>{
+//     $('.settingsPopup_generalScreen').css('display', 'flex')
+//     $('.settingsPopup_theme').css('display', 'none')
+// })
+// let theme = 'dark';
+// function themeChanging(updatedData){
+//     $('#moon').click(()=>{
+//         $('#clickAudio')[0].play();
+//         $('.wrap').css('background-color', '#001C30')
+//         $('.wrapBackgroundContainer').css('background-color', '#001c30d1')
+//         $('.headerBtns button').css('background-color', '#13637E')
+//         $('.drinkItem').css('background-color', '#13637E')
+//         $('.drinkItem_name').css('color', '#001C30')
+//         $('.drinkItem_taste').css('color', '#001C30')
+//         $('.drinkItem_count').css('color', '#001C30')
+//         $('.drinkItem_buttons button').css('background-color', '#64CCC5')
+//         $('.createGoodsPopup').css('background-color', '#1a7391')
+//         $('.orderPopup').css('background-color', '#1a7391')
+//         $('.sellPopup').css('background-color', '#1a7391')
+//         $('.settingsPopup').css('background-color', '#1a7391')
+//         $('.createGoodsPopupInput').css('background-color', '#1a7391')
+//         theme = 'dark';
+//     })
+//     $('#sun').click(()=>{
+//         $('#clickAudio')[0].play();
+//         $('.wrap').css('background-color', '#ffffff')
+//         $('.wrapBackgroundContainer').css('background-color', '#85b7dcd1')
+//         $('.headerBtns button').css('background-color', '#fff')
+//         $('.drinkItem').css('background-color', '#64ccc54f')
+//         $('.drinkItem_name').css('color', '#13637E')
+//         $('.drinkItem_taste').css('color', '#13637E')
+//         $('.drinkItem_count').css('color', '#13637E')
+//         $('.drinkItem_buttons button').css('background-color', '#64ccc54f')
+//         $('.createGoodsPopup').css('background-color', '#add6e3')
+//         $('.orderPopup').css('background-color', '#add6e3')
+//         $('.sellPopup').css('background-color', '#add6e3')
+//         $('.settingsPopup').css('background-color', '#add6e3')
+//         $('.createGoodsPopupInput').css('background-color', '#001c304b')
+//         theme = 'light'
+//     })
+// }
+
+function setTheme(theme) {
+    if (theme === 'dark') {
+        // Set dark theme styles
         $('#clickAudio')[0].play();
         $('.wrap').css('background-color', '#001C30')
         $('.wrapBackgroundContainer').css('background-color', '#001c30d1')
@@ -78,9 +116,8 @@ function themeChanging(updatedData){
         $('.sellPopup').css('background-color', '#1a7391')
         $('.settingsPopup').css('background-color', '#1a7391')
         $('.createGoodsPopupInput').css('background-color', '#1a7391')
-        theme = 'dark';
-    })
-    $('#sun').click(()=>{
+    } else {
+        // Set light theme styles
         $('#clickAudio')[0].play();
         $('.wrap').css('background-color', '#ffffff')
         $('.wrapBackgroundContainer').css('background-color', '#85b7dcd1')
@@ -95,10 +132,39 @@ function themeChanging(updatedData){
         $('.sellPopup').css('background-color', '#add6e3')
         $('.settingsPopup').css('background-color', '#add6e3')
         $('.createGoodsPopupInput').css('background-color', '#001c304b')
-        theme = 'light'
-    })
+    }
 }
+function saveThemeToLocalStorage(theme) {
+    localStorage.setItem('theme', theme);
+}
+function loadThemeFromLocalStorage() {
+    return localStorage.getItem('theme') || 'dark'; 
+}
+function themeChanging() {
+    $('#moon').click(function () {
+        $('#clickAudio')[0].play();
+        setTheme('dark');
+        saveThemeToLocalStorage('dark');
+    });
+    $('#sun').click(function () {
+        $('#clickAudio')[0].play();
+        setTheme('light');
+        saveThemeToLocalStorage('light');
+    });
+}
+let savedTheme = loadThemeFromLocalStorage();
+setTheme(savedTheme);
+$('#theme').click(function () {
+    $('#clickAudio')[0].play();
+    $('.settingsPopup_generalScreen').css('display', 'none');
+    $('.settingsPopup_theme').css('display', 'flex');
+});
+$('#xmarkTheme').click(function () {
+    $('.settingsPopup_generalScreen').css('display', 'flex');
+    $('.settingsPopup_theme').css('display', 'none');
+});
 themeChanging();
+
 
 
 //localStorage saving goods
