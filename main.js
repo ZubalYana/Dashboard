@@ -70,7 +70,8 @@ function setTheme(theme) {
         $('.settingsPopup').css('background-color', '#1a7391')
         $('.createGoodsPopupInput').css('background-color', '#1a7391')
         $('.createGoodsPopupInput').css('color', '#1a7391')
-
+        $('.header').css('border', '3px #13637E solid')
+        $('.drinkStorage').css('border', '3px #13637E solid')
     } else {
         // Set light theme styles
         $('#clickAudio')[0].play();
@@ -87,6 +88,8 @@ function setTheme(theme) {
         $('.sellPopup').css('background-color', '#add6e3')
         $('.settingsPopup').css('background-color', '#add6e3')
         $('.createGoodsPopupInput').css('background-color', '#001c304b')
+        $('.header').css('border', '3px #64CCC5 solid')
+        $('.drinkStorage').css('border', '3px #64CCC5 solid')
     }
 }
 function saveThemeToLocalStorage(theme) {
