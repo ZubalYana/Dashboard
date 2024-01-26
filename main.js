@@ -69,6 +69,8 @@ function setTheme(theme) {
         $('.sellPopup').css('background-color', '#1a7391')
         $('.settingsPopup').css('background-color', '#1a7391')
         $('.createGoodsPopupInput').css('background-color', '#1a7391')
+        $('.createGoodsPopupInput').css('color', '#1a7391')
+
     } else {
         // Set light theme styles
         $('#clickAudio')[0].play();
